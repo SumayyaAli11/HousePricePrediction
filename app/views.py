@@ -12,7 +12,7 @@ def index(request):
 def predict(request):
     return render(request,'predict.html')
 def result(request):
-    df=pd.read_csv(r"C:\Users\ws\Housing_data.csv")
+    df=pd.read_csv(r"D:\MAYNOOTH\PROJECTS\HousePricePrediction\Housing_data.csv")
     df=df.drop(columns=['Address'])
     X=df.drop('Price',axis=1)
     y=df['Price']
